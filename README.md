@@ -7,7 +7,10 @@ A minimal chatbot platform where users can create AI agents and chat with them.
 - Auth: JWT
 - AI: Google Gemini, OpenAI Files API
 
-
+## Current Status
+- Project structure initialized
+- Backend server running
+- JWT Authentication implemented
 
 ## Backend Setup 
 
@@ -24,6 +27,18 @@ npm install
 npm run dev
 ```
 
-## Current Status
-- Project structure initialized
-- Backend server running
+
+## Authentication
+
+### Features
+- User registration
+- User login
+- Password hashing using bcrypt
+- JWT-based authentication
+- Protected routes with middleware
+
+### API Endpoints
+POST /auth/register  
+POST /auth/login
+
+
