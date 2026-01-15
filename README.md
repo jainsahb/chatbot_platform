@@ -12,6 +12,7 @@ A minimal chatbot platform where users can create AI agents and chat with them.
 - Backend server running
 - JWT Authentication implemented
 - Project model with ownership-based access control
+- Prompt management scoped to projects
 
 ## Backend Setup 
 
@@ -54,3 +55,16 @@ POST /auth/login
 POST /projects  
 GET /projects  
 GET /projects/:id
+
+
+## Prompt Management
+
+### Features
+- Prompts can be added to AI projects
+- Prompts define agent behavior
+- Ownership-based access control enforced
+
+### API Endpoints
+POST /prompts/:projectId  
+GET /prompts/:projectId
+
