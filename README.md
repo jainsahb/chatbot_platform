@@ -13,8 +13,9 @@ A minimal chatbot platform where users can create AI agents and chat with them.
 - JWT Authentication implemented
 - Project model with ownership-based access control
 - Prompt management scoped to projects
-- chat system uses Google Gemini via its REST API
-- File contexy suppo 
+- Chat system uses Google Gemini via its REST API
+- OpenAI-Files API to support file uplaod per project 
+- Simple Retrieval-Augmented Generation (RAG-lite)
 
 ## Backend Setup 
 
@@ -109,3 +110,15 @@ The REST approach was chosen to:
 
 ### API Endpoint
 POST /files/:projectId (multipart/form-data)
+
+## RAG-Lite (File-Aware Chat)
+
+### Features
+- Uploaded files used as reference context
+- File content injected into chat prompts
+- Simple Retrieval-Augmented Generation (RAG-lite)
+- No vector database (intentionally kept simple)
+
+### Design Note
+This phase focuses on conceptual clarity before introducing embeddings or vector search.
+
