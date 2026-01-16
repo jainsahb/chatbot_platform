@@ -13,6 +13,8 @@ A minimal chatbot platform where users can create AI agents and chat with them.
 - JWT Authentication implemented
 - Project model with ownership-based access control
 - Prompt management scoped to projects
+- chat system uses Google Gemini via its REST API
+- File contexy suppo 
 
 ## Backend Setup 
 
@@ -96,3 +98,14 @@ The REST approach was chosen to:
 - Keep integration predictable and debuggable
 - Maintain a clean service abstraction for future provider changes
 
+
+## OpenAI File Uploads
+
+### Features
+- Files uploaded per project
+- Integrated OpenAI Files API
+- Secure ownership checks
+- File references stored in database
+
+### API Endpoint
+POST /files/:projectId (multipart/form-data)
