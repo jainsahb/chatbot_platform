@@ -68,3 +68,31 @@ GET /projects/:id
 POST /prompts/:projectId  
 GET /prompts/:projectId
 
+
+
+## Chat System
+
+### Features
+- Chat with AI agents
+- Prompts combined with user message
+- Integrated Google Gemini API
+- Secure backend-to-AI communication
+
+### API Endpoint
+POST /chat/:projectId
+
+### LLM Integration Choice
+
+The chat system uses Google Gemini via its REST API.
+
+During development, three integration approaches were evaluated:
+- Gemini REST API approach
+- Official Google Gemini SDK
+- Gemini OpenAI-compatible REST API
+
+The REST approach was chosen to:
+- Avoid Google Cloud IAM setup
+- Use explicit API-key authentication
+- Keep integration predictable and debuggable
+- Maintain a clean service abstraction for future provider changes
+
