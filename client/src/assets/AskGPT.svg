@@ -1,0 +1,37 @@
+<svg width="900" height="260" viewBox="0 0 900 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="askgptGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#A456F7"/>
+      <stop offset="100%" stop-color="#3D81F6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Chatbot Icon -->
+  <g transform="translate(40,40)">
+    <!-- Head -->
+    <rect x="0" y="0" rx="28" ry="28" width="160" height="120" fill="url(#askgptGradient)"/>
+    
+    <!-- Antenna -->
+    <circle cx="80" cy="-12" r="8" fill="url(#askgptGradient)"/>
+    <rect x="76" y="-28" width="8" height="16" fill="url(#askgptGradient)"/>
+
+    <!-- Face -->
+    <rect x="30" y="35" rx="18" ry="18" width="100" height="50" fill="#1E1E2E"/>
+    <circle cx="65" cy="60" r="6" fill="#FFFFFF"/>
+    <circle cx="95" cy="60" r="6" fill="#FFFFFF"/>
+    <path d="M65 72 Q80 82 95 72" stroke="#FFFFFF" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+    <!-- Speech Bubble -->
+    <path d="M-10 70 h40 a12 12 0 0 1 0 24 h-16 l-12 12 v-12 h-12 a12 12 0 0 1 0-24z"
+          fill="url(#askgptGradient)"/>
+  </g>
+
+  <!-- Text -->
+  <text x="260" y="145"
+        font-size="96"
+        font-weight="700"
+        font-family="Inter, Segoe UI, Arial, sans-serif"
+        fill="url(#askgptGradient)">
+    AskGPT
+  </text>
+</svg>
