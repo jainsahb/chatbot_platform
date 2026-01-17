@@ -16,6 +16,7 @@ A minimal chatbot platform where users can create AI agents and chat with them.
 - Chat system uses Google Gemini via its REST API
 - OpenAI-Files API to support file uplaod per project 
 - Simple Retrieval-Augmented Generation (RAG-lite)
+- Dashboard UI for Chatbot Platform
 
 ## Backend Setup 
 
@@ -122,3 +123,24 @@ POST /files/:projectId (multipart/form-data)
 ### Design Note
 This phase focuses on conceptual clarity before introducing embeddings or vector search.
 
+
+## Frontend
+
+### Features
+- Dashboard UI for Chatbot Platform
+- Sidebar with recent chats
+- ChatBox for chat interface
+- Login and register pages
+- User authentication (JWT)
+- Protected routes
+
+### Tech Stack
+- React (Vite)
+- Axios
+- Tailwind CSS
+- react-markdown (AI response formatting)
+- prismjs (code syntax highlighting)
+
+
+### Design Philosophy
+Frontend is intentionally simple to emphasize backend architecture and AI integration.

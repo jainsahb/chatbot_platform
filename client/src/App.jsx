@@ -5,23 +5,40 @@ import ChatBox from "./components/ChatBox.jsx";
 import Login from "./pages/Login.jsx";
 import { assets } from "./assets/assets";
 import "./assets/prism.css";
+import { useAppContext } from "./context/AppContext";
+import { ProtectedRoute } from "./components/ProtectedRoute";
 
 const App = () => {
-
   // const [ isMenuOpen, setIsMenuOpen ] = useState(false);
+  const { user } = useAppContext();
 
   return (
     <>
-    {/* {isMenuOpen && <img} */}
-      <div className="dark:bg-gradient-to-b from-[#242124] to [#000000] dark:text-white">
-        <div className="flex h-screen w-screen">
-          <SideBar />
-          <Routes>
-            <Route path='/' element={<ChatBox />} />
-            <Route path='/login' element={<Login />} />
-          </Routes>
+      {/* {isMenuOpen && <img} */}
+      {user ? (
+        <div className="dark:bg-gradient-to-b from-[#242124] to [#000000] dark:text-white">
+          <div className="flex h-screen w-screen">
+            <SideBar />
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <ProtectedRoute>
+                    <ChatBox />
+                  </ProtectedRoute>
+                }
+              />
+            </Routes>
+          </div>
         </div>
-      </div>
+      ) : (
+        <div
+          className="bg-gradient-to-b from-[#242124] to-[#000000] flex 
+        items-center justify-center h-screen w-screen"
+        >
+          <Login />
+        </div>
+      )}
     </>
   );
 };
