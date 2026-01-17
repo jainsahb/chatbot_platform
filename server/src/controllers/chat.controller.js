@@ -39,16 +39,14 @@ export const chatWithAgent = async (req, res) => {
     });
 
     // File context (RAG-lite), if any
-    // if (files.length !== 0) {
-      for (const file of files) {
-        const fileText = readFileContent(`uploads/${file.filename}`);
-
+    for (const file of files) {
+      if (file.content) {
         messages.push({
           role: "user",
-          content: `Here is reference material:\n${fileText}`,
+          content: `Here is reference material (${file.filename}):\n${file.content}`,
         });
       }
-    // }
+    }
 
     // Add user message
     messages.push({
