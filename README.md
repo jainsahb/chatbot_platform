@@ -6,6 +6,7 @@ A minimal chatbot platform where users can create AI agents and chat with them.
 - Frontend: React.js
 - Auth: JWT
 - AI: Google Gemini, OpenAI Files API
+- Database: MongoDB
 
 ## Current Status
 - Project structure initialized
@@ -17,6 +18,7 @@ A minimal chatbot platform where users can create AI agents and chat with them.
 - OpenAI-Files API to support file uplaod per project 
 - Simple Retrieval-Augmented Generation (RAG-lite)
 - Dashboard UI for Chatbot Platform
+- Login and register form with JWT authentication
 
 ## Backend Setup 
 
